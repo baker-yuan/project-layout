@@ -14,13 +14,15 @@
 
 > https://github.com/golang-standards/project-layout
 
-
+[project-layout](./project-layout)
 
 # kratos
 
 > https://github.com/go-kratos/kratos-layout
 >
 > https://github.com/go-kratos/examples/blob/main/README-CN.md
+>
+> https://github.com/go-kratos/examples
 
 ```bash
 kratos new kratos-layout
@@ -32,6 +34,10 @@ $ ./bin/kratos-layout -conf ./configs
 
 curl 'http://127.0.0.1:8000/helloworld/kratos'
 ```
+
+
+
+[kratos-layout](./kratos-layout)
 
 
 
