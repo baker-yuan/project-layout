@@ -10,17 +10,17 @@ import (
 
 const _defaultEntityCap = 64
 
-// TranslationRepo -.
+// TranslationRepo 翻译记录操作
 type TranslationRepo struct {
 	*postgres.Postgres
 }
 
-// New -.
+// New 翻译记录操作
 func New(pg *postgres.Postgres) *TranslationRepo {
 	return &TranslationRepo{pg}
 }
 
-// GetHistory -.
+// GetHistory 获取翻译历史
 func (r *TranslationRepo) GetHistory(ctx context.Context) ([]entity.Translation, error) {
 	sql, _, err := r.Builder.
 		Select("source, destination, original, translation").
@@ -52,7 +52,7 @@ func (r *TranslationRepo) GetHistory(ctx context.Context) ([]entity.Translation,
 	return entities, nil
 }
 
-// Store -.
+// Store 存储翻译记录
 func (r *TranslationRepo) Store(ctx context.Context, t entity.Translation) error {
 	sql, args, err := r.Builder.
 		Insert("history").

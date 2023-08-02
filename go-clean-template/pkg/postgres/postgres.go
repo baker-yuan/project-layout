@@ -17,7 +17,7 @@ const (
 	_defaultConnTimeout  = time.Second
 )
 
-// Postgres -.
+// Postgres 用于操作PostgreSQL数据库
 type Postgres struct {
 	maxPoolSize  int
 	connAttempts int
@@ -27,7 +27,7 @@ type Postgres struct {
 	Pool    *pgxpool.Pool
 }
 
-// New -.
+// New 创建Postgres
 func New(url string, opts ...Option) (*Postgres, error) {
 	pg := &Postgres{
 		maxPoolSize:  _defaultMaxPoolSize,
@@ -35,7 +35,7 @@ func New(url string, opts ...Option) (*Postgres, error) {
 		connTimeout:  _defaultConnTimeout,
 	}
 
-	// Custom options
+	// 自定义选项
 	for _, opt := range opts {
 		opt(pg)
 	}
@@ -69,7 +69,7 @@ func New(url string, opts ...Option) (*Postgres, error) {
 	return pg, nil
 }
 
-// Close -.
+// Close 关闭连接
 func (p *Postgres) Close() {
 	if p.Pool != nil {
 		p.Pool.Close()
