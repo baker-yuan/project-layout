@@ -14,7 +14,7 @@
 
 > https://github.com/golang-standards/project-layout
 
-[project-layout](./project-layout)
+- [project-layout](./project-layout)
 
 # kratos
 
@@ -37,7 +37,32 @@ curl 'http://127.0.0.1:8000/helloworld/kratos'
 
 
 
-[kratos-layout](./kratos-layout)
+- [kratos-layout](./kratos-layout)
+- [kratos-layout-blog](./kratos-layout-blog)
+
+
+
+# nunu
+
+```bash
+nunu new nunu-layout-advanced
+
+› cd nunu-layout-advanced 
+› nunu run 
+
+Basic Layout 包含一个非常精简的架构目录结构，适合非常熟悉Nunu项目的开发者使用。
+```
+
+
+
+```bash
+nunu new nunu-layout-basic
+
+› cd nunu-layout-basic 
+› nunu run 
+
+Advanced Layout 包含了很多Nunu的用法示例（ db、redis、 jwt、 cron、 migration等），适合开发者快速学习了解Nunu的架构思想。此命令将创建一个名为projectName的目录，并在其中生成一个优雅的Golang项目结构。
+```
 
 
 
