@@ -44,6 +44,11 @@ curl 'http://127.0.0.1:8000/helloworld/kratos'
 
 # nunu
 
+- [nunu-layout-basic](./nunu-layout-basic)
+- [nunu-layout-advanced](./nunu-layout-advanced)
+
+> https://github.com/go-nunu/nunu/blob/main/README_zh.md
+
 ```bash
 nunu new nunu-layout-advanced
 
@@ -63,6 +68,14 @@ nunu new nunu-layout-basic
 
 Advanced Layout 包含了很多Nunu的用法示例（ db、redis、 jwt、 cron、 migration等），适合开发者快速学习了解Nunu的架构思想。此命令将创建一个名为projectName的目录，并在其中生成一个优雅的Golang项目结构。
 ```
+
+
+
+# go-zero
+
+> https://go-zero.dev/docs/concepts/layout
+>
+> https://github.com/zeromicro/zero-examples
 
 
 
